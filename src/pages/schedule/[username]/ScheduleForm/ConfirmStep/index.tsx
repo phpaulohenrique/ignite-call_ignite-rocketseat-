@@ -21,7 +21,7 @@ interface ConfirmStepProps {
     schedulingDate: Date
 }
 
-export function ConfirmStep({ onCancelConfirmation, schedulingDate }: ConfirmStepProps) {
+export default function ConfirmStep({ onCancelConfirmation, schedulingDate }: ConfirmStepProps) {
     const {
         register,
         handleSubmit,

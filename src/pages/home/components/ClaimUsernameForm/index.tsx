@@ -5,7 +5,6 @@ import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useRouter } from 'next/router'
-import { useEffect } from 'react'
 
 const claimUsernameFormSchema = z.object({
     username: z
@@ -22,7 +21,6 @@ export function ClaimUsernameForm() {
         register,
         handleSubmit,
         formState: { errors, isSubmitting },
-        setValue,
     } = useForm<ClaimUsernameFormData>({
         resolver: zodResolver(claimUsernameFormSchema),
     })
